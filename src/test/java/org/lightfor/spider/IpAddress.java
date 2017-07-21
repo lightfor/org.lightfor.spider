@@ -2,6 +2,7 @@ package org.lightfor.spider;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.junit.Test;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -11,10 +12,13 @@ import java.net.Proxy;
  * IP Location Info
  * Created by Light on 2017/5/26.
  */
+
 public class IpAddress {
 
-    public static void main(String[] args) throws IOException {
-        String url = "http://www.ipip.net/ip.html";
+    @Test
+    @Deprecated//ipip add _verify param to vi
+    public void test() throws Exception {
+        String url = "https://www.ipip.net/ip.html";
         String ipStr = "8.8.8.8\n" +
                 "8.8.4.4\n";
         String[] ips = ipStr.split("\n");
